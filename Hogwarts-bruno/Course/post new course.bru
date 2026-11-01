@@ -1,0 +1,29 @@
+meta {
+  name: post new course
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3000/courses
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "New Course",
+    "teacher_id": 1
+  }
+}
+
+tests {
+  test("creates a course", function() {
+    expect(res.getStatus()).to.equal(201);
+  });
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

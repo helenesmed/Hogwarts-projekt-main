@@ -1,0 +1,30 @@
+meta {
+  name: post new student
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3000/students
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+  "name": "New Student",
+  "year": 1,
+  "house_id": 1
+  }
+}
+
+tests {
+  test("creates a student", function() {
+    expect(res.getStatus()).to.equal(201);
+  });
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

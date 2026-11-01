@@ -1,0 +1,22 @@
+meta {
+  name: get courses
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:3000/courses
+  body: none
+  auth: inherit
+}
+
+tests {
+  test("returns a successful response", function() {
+    expect(res.getStatus()).to.equal(200);
+  });
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

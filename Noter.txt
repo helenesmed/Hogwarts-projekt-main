@@ -1,0 +1,4 @@
+Put single teacher:
+    PUT /teachers/:id
+
+    find name og courses og id 

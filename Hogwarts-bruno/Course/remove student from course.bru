@@ -1,0 +1,22 @@
+meta {
+  name: remove student from course
+  type: http
+  seq: 6
+}
+
+delete {
+  url: http://localhost:3000/courses/1/students/1
+  body: none
+  auth: inherit
+}
+
+tests {
+  test("removes a student from a course", function() {
+    expect(res.getStatus()).to.equal(200);
+  });
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

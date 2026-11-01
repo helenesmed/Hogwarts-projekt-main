@@ -1,0 +1,22 @@
+meta {
+  name: delete existing teacher
+  type: http
+  seq: 4
+}
+
+delete {
+  url: http://localhost:3000/teachers/3
+  body: none
+  auth: inherit
+}
+
+tests {
+  test("deletes a teacher", function() {
+    expect(res.getStatus()).to.equal(200);
+  });
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

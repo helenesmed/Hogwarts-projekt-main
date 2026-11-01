@@ -1,0 +1,29 @@
+meta {
+  name: post new teacher
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3000/teachers
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "New Teacher",
+    "house_id": 1
+  }
+}
+
+tests {
+  test("creates a teacher", function() {
+    expect(res.getStatus()).to.equal(201);
+  });
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
