@@ -104,4 +104,4 @@ Requests med `POST`, `PUT` og `DELETE` ændrer data. Især DELETE-requests slett
 
 ## GitHub
 
-Før aflevering skal projektet pushes til et GitHub-repository. Indsæt repository-linket her, når det er oprettet: **[GitHub repository-link indsættes her]**.
+Før aflevering skal projektet pushes til et GitHub-repository. Indsæt repository-linket her, når det er oprettet: **[https://github.com/helenesmed/Hogwarts-projekt-main.git]**.
