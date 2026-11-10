@@ -1,4 +1,4 @@
-import { Router } from "express";
+import express from "express";
 import {
     changeCourseTeacher,
     createCourseEntry,
@@ -8,7 +8,7 @@ import {
     updateCourseEntry
 } from "../Controllers/courses.controller.js";
 
-const router = Router();
+const router = express.Router();
 
 router.get("/", listCourses);
 router.get("/:id", showCourse);

@@ -1,4 +1,4 @@
-import { Router } from "express";
+import express from "express";
 import {
     createStudentEntry,
     deleteStudentEntry,
@@ -7,7 +7,7 @@ import {
     updateStudentEntry
 } from "../Controllers/students.controller.js";
 
-const router = Router();
+const router = express.Router();
 
 router.get("/", listStudents);
 router.get("/:id", showStudent);

@@ -1,7 +1,7 @@
-import { Router } from "express";
+import express from "express";
 import { listHouses, showHouse } from "../Controllers/houses.controller.js";
 
-const router = Router();
+const router = express.Router();
 
 router.get("/", listHouses);
 router.get("/:id", showHouse);
