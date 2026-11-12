@@ -1,9 +1,12 @@
 import express from "express";
+
 import coursesRoutes from "./Routes/courses.route.js";
 import courseStudentsRoutes from "./Routes/courses.students.js";
 import housesRoutes from "./Routes/houses.route.js";
 import studentsRoutes from "./Routes/students.route.js";
 import teachersRoutes from "./Routes/teachers.route.js";
+import HTTPError from "./errorhandling/HTTPError.js";
+import errorhandler from "./errorhandling/errorhandler.js";
 
 const app = express();
 
@@ -26,5 +29,11 @@ app.use("/teachers", teachersRoutes);
 app.use("/students", studentsRoutes);
 app.use("/courses", coursesRoutes);
 app.use("/courses", courseStudentsRoutes);
+
+app.use((req, res, next) => {
+    next(new HTTPError(404, "Route not found"));
+});
+
+app.use(errorhandler);
 
 export default app;

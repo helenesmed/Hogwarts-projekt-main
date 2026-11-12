@@ -1,15 +1,16 @@
 {
   "name": "hogwarts-project",
+  "author": "Helene Gassama Smed",
   "version": "1.0.0",
-  "description": "",
+  "description": "The Backend for Hogwarts Course Management System",
   "main": "app.js",
   "scripts": {
+    "watch": "node --watch app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "dev": "node --watch server.js"
   },
   "keywords": [],
-  "author": "",
   "license": "ISC",
   "type": "module",
   "dependencies": {
